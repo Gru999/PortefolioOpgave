@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - UML 2. Portefolio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/UML2Portefolio.styles.css" asp-append-version="true" />
+    
+</head>
+<body>
+    <header>
+        <!--<nav>
+            <ul>
+                <li><a href="https://www.google.com/" target="_blank">Google</a></li>
+                <li><a asp-page="/Page2">Page2</a></li>
+                <li><a asp-page="/Index">Home</a></li>
+            </ul>
+        </nav> -->
+
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            
+            <a class="navbar-brand" asp-page="/Index">Home</a>
+
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://www.google.com">Google</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Page2">Page 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:fred00s7@edu.zealand.dk">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <footer>
+        <div class="container">
+            <h1>Contact me at:</h1>
+            <p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                </svg><a href="mailto:fred00s7@edu.zealand.dk">Email - fred00s7@edu.zealand.dk</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
